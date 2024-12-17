@@ -1,0 +1,17 @@
+// ... existing code ...
+dependencies {
+    implementation 'javax.servlet:javax.servlet-api:4.0.1' // Adjust version as needed
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+}
+
+// Execute Maven commands
+task cleanInstall(type: Exec) {
+    commandLine 'mvn', 'clean', 'install'
+}
+
+task resolveDependencies(type: Exec) {
+    commandLine 'mvn', 'dependency:resolve'
+}
+
+build.dependsOn cleanInstall, resolveDependencies
