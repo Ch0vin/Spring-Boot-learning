@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.springboot.entities.Author;
 import com.springboot.service.AuthorService;
-
+// routes and end points we have
 @RestController
 @RequestMapping("/authors")
 public class AuthorController {
